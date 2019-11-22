@@ -11,7 +11,7 @@ linux based operating systems
 <h3>Usage</h3>
 <p>
 
-    const Recorder = require("screen-recorder");
+    const Recorder = require("linux-screen-recorder");
     let r = new Recorder();
     r.record(); // start recording
    
@@ -21,7 +21,7 @@ linux based operating systems
 
 <p>
     
-    const Recorder = require("screen-recorder");
+    const Recorder = require("linux-screen-recorder");
    
     let options = {
         width:1280,
