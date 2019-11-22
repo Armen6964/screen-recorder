@@ -74,5 +74,3 @@ linux based operating systems
 <h1>TODO List</h1>
 
 <p>1) Setup recording with audio </p>
-<p>2) Setup recording for Windows </p>
-<p>2) Setup recording for Mac </p>
