@@ -1,0 +1,22 @@
+{
+  "name": "screen-recorder",
+  "version": "1.0.0",
+  "description": "Simple screen recorder on node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "screen",
+    "recorder",
+    "screen recorder",
+    "linux",
+    "ffmpeg"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dev": "^0.1.3",
+    "screenres": "^2.0.1"
+  }
+}
