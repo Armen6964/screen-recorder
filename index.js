@@ -146,6 +146,7 @@ class Recorder {
         });
         console.log("\x1b[32mRecording...\x1b[0m");
     }
+
     stop(){
         if (this.process != null){
             this.process.kill('SIGINT');

@@ -5,7 +5,7 @@ Current version required
 **ffmpeg** 
 installation on device 
 and working only on 
-linux bases operating systems
+linux based operating systems
 </p>
 
 <h3>Usage</h3>

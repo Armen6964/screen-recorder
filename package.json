@@ -1,5 +1,5 @@
 {
-  "name": "screen-recorder",
+  "name": "linux-screen-recorder",
   "version": "1.0.0",
   "description": "Simple screen recorder on node js",
   "main": "index.js",
