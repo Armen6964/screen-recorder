@@ -3,6 +3,7 @@ const fs = require("fs");
 const {spawn} = require("child_process");
 
 class Recorder {
+
     constructor(params){
         if (!params) params = {};
 
@@ -21,6 +22,7 @@ class Recorder {
         }
         this.validate();
     }
+
     attacheWebPlayer(){
         const http =require("http");
         const path = require('path');
@@ -76,6 +78,7 @@ class Recorder {
             console.log(req.url);
         }).listen(8080);
     }
+
     fileName(){
         let d = new Date();
         let h = d.getHours();
@@ -86,6 +89,7 @@ class Recorder {
         if (s < 10){s = "0"+s}
         return `${h}:${m}:${s}`;
     }
+
     validate(){
        if (this.w  > this.screenWidth){
            console.log("BIG")
@@ -122,6 +126,7 @@ class Recorder {
             \x1b[0m`);
        }
     }
+
     record(){
         this.filepath = this.path+"/"+this.fileName()+".mp4";
         let args=  [
@@ -159,50 +164,8 @@ class Recorder {
 
     get filePath(){return this.filepath }
 
-    get X(){
-        return this.x;
-    }
-    get Y(){
-        return this.y;
-    }
+    get X(){ return this.x; }
 
+    get Y(){ return this.y; }
 }
-let options = {
-    width:1280,
-    //width is recording area size horizontal.
-    //not required (<<Integer>> default value is device screen width),
-    height:720,
-    // height is recording area size vertical
-    // not required (<<Integer>> default value is device screen height),
-    x:0,
-    // x is horizontal offset of the recording area
-    // not required (<<Integer>> default value 0)
-    y:0,
-    // y is vertical offset of the recording area
-    // not required (<<Integer>> default value 0)
-    fps : 20,
-    // Frame Per Second to record
-    // not required (<<Integer>> default value 25)
-    path : ".",
-    // path where the recording file will be saved
-    // not required (<<String>> default value ".")
-    webServer:true,
-    // attaching web server on 8080 port for testing recorded file
-    // open in your browser (http://{host}:8080/home?file={filename}.mp4)
-    // not required (<<Boolean>> default value false))
-};
-
-let r = new Recorder(options);
-
-r.screenHeight; //return device screen height
-r.screenWidth; //returns device screen width
-r.height; //returns recording screen height
-r.width; //returns recording screen width
-r.filePath; //returns recording file path
-r.X; //returns recording horizontal offset
-r.Y; //returns recording vertical offset
-
-r.record(); //start recording
-r.stop(); //stop recording
-
 module.exports = Recorder;
