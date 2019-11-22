@@ -11,8 +11,14 @@
     "recorder",
     "screen recorder",
     "linux",
-    "ffmpeg"
+    "ffmpeg",
+    "video recorder"
   ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Armen6964/screen-recorder.git"
+  },
+  "homepage": "https://github.com/Armen6964/screen-recorder/blob/master/README.md",
   "author": "Armen Hakobyan",
   "license": "ISC",
   "dependencies": {
